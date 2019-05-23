@@ -4,6 +4,6 @@
   "license": "MIT",
   "bin": "kidonng.js",
   "dependencies": {
-    "open": "^6.3.0"
+    "open": "6.3.0"
   }
 }
