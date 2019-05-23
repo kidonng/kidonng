@@ -1,0 +1,9 @@
+{
+  "name": "kidonng",
+  "version": "1.3.1",
+  "license": "MIT",
+  "bin": "kidonng.js",
+  "dependencies": {
+    "open": "^6.3.0"
+  }
+}
