@@ -1,3 +1,3 @@
-# `$ npx kidonng`
+# `npx kidonng`
 
-Just a shortcut to my home, [*The Story*](https://kidonng.me/).
+Shortcut to [The Story](https://kidonng.me/).
