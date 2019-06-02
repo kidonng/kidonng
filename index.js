@@ -1,4 +1,7 @@
 #!/usr/bin/env node
 
-console.log('Howdy!')
-require('open')('https://kidonng.me/')
+const chalk = require('chalk')
+const open = require('open')
+
+console.log(chalk.blue('Howdy! This is kidonng.'))
+open('https://kidonng.me/')
