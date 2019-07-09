@@ -1,11 +1,9 @@
-<h1 align="center"><code>npx kidonng</code></h1>
+# Stuff from @kidonng
 
-<div align="center">
+This is a CLI program showing stuff from [@kidonng](https://github.com/kidonng).
 
-[![npm](https://img.shields.io/npm/v/kidonng.svg?style=for-the-badge)](https://npm.im/kidonng)
-![npm](https://img.shields.io/npm/dt/kidonng.svg?style=for-the-badge)
-[![GitHub](https://img.shields.io/github/license/kidonng/kidonng.svg?style=for-the-badge)](LICENSE)
+## Usage
 
-</div>
+If you have Node.js installed, simply run `npx kidonng` to run the program.
 
-Shortcut to [kidonng's homepage](https://kidonng.me/).
+If you prefer to use Yarn, you can also use `yarn dlx kidonng` (Yarn 2 required).

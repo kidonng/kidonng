@@ -1,18 +1,12 @@
 {
   "name": "kidonng",
-  "version": "1.5.1",
-  "description": "Shortcut to kidonng's homepage",
-  "author": "kidonng",
-  "homepage": "https://github.com/kidonng/kidonng#readme",
+  "version": "1.5.2",
+  "description": "Stuff from @kidonng",
   "license": "MIT",
+  "repository": "kidonng/kidonng",
+  "author": "Kid (https://github.com/kidonng)",
   "bin": "index.js",
-  "files": ["index.js"],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kidonng/kidonng.git"
-  },
   "dependencies": {
-    "chalk": "^2.4.2",
-    "open": "6.4.0"
+    "open": "^7.0.2"
   }
 }

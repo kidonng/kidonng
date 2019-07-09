@@ -1,0 +1,31 @@
+on: create
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          registry-url: https://registry.npmjs.org
+      - run: yarn
+      - if: github.event.ref_type == 'tag'
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+  publish-gpr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          registry-url: https://npm.pkg.github.com/
+      # Prepend scope to package name
+      - run: sed -i 's/"name":\ "/"name":\ "@kidonng\//' package.json
+      - run: yarn
+      - if: github.event.ref_type == 'tag'
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
