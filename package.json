@@ -12,7 +12,7 @@
     "url": "git+https://github.com/kidonng/kidonng.git"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^3.0.0",
     "open": "6.4.0"
   }
 }
