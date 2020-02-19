@@ -1,0 +1,10 @@
+{
+  "name": "kidonng",
+  "version": "1.1.0",
+  "license": "MIT",
+  "bin": "index.js",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "opn": "^5.4.0"
+  }
+}
