@@ -1,9 +1,5 @@
-# Stuff from @kidonng
+## ![Icon of Akaza Akari](https://xuann.wang/favicon.png) Akarin~ ![Visits counter](https://img.shields.io/badge/dynamic/json?label=Visits&query=%24.kidonng&url=https%3A%2F%2Fapi.xuann.wang%2Fapi%2Fcounter?name=kidonng)
 
-This is a CLI program showing stuff from [@kidonng](https://github.com/kidonng).
+All code are opinionated. I code because of different opinions.
 
-## Usage
-
-If you have Node.js installed, simply run `npx kidonng` to run the program.
-
-If you prefer to use Yarn, you can also use `yarn dlx kidonng` (Yarn 2 required).
+Check out [my latest typo fixes](https://gitstalk.netlify.app/kidonng), or [laying out some bucks](https://xuann.wang/donate) if you love my open source contributions.
