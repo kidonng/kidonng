@@ -1,0 +1,14 @@
+{
+	"headers": [
+		{
+			"source": "/(.*)",
+			"headers": [
+				{
+					"key": "strict-transport-security",
+					"value": "max-age=63072000; includeSubDomains; preload"
+				}
+			]
+		}
+	],
+	"$schema": "https://openapi.vercel.sh/vercel.json"
+}
