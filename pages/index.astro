@@ -1,5 +1,6 @@
 ---
 const avatar = 'https://wsrv.nl/?output=webp&url=https://gravatar.com/avatar/193222282fa770ae593ae08edbeb8942dc56d98cb7bce6360c49e4fefa7c2431'
+const avatarSize = 100
 ---
 
 <html lang="en">
@@ -9,8 +10,8 @@ const avatar = 'https://wsrv.nl/?output=webp&url=https://gravatar.com/avatar/193
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Hi, I'm Kid</title>
 	</head>
-	<body class="prose text-lg p-8">
-		<img class="rounded-full" src={avatar} srcset={`${avatar}?size=160 2x`} width="80" height="80" alt="Akaza Akari from Yuru Yuri">
+	<body class="prose text-xl p-8">
+		<img class="rounded-full" src={avatar} srcset={`${avatar}?size=${avatarSize * 2} 2x`} width={avatarSize} height={avatarSize} alt="Akaza Akari from Yuru Yuri">
 
 		<h1>Hi, I'm Kid</h1>
 		<ul>
