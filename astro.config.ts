@@ -1,16 +1,9 @@
 import {defineConfig} from 'astro/config'
-import {presetTypography, presetUno} from 'unocss'
-import unocss from 'unocss/astro'
+import tailwind from '@astrojs/tailwind'
 
 export default defineConfig({
 	integrations: [
-		unocss({
-			presets: [
-				presetUno(),
-				presetTypography(),
-			],
-			injectReset: true,
-		}),
+		tailwind(),
 	],
 	srcDir: '.',
 })
