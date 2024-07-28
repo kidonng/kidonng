@@ -8,14 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm install --global pnpm@8
+      - run: corepack enable
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: latest
           cache: pnpm
       - run: pnpm install
-      - run: pnpm astro build
-      - uses: easingthemes/ssh-deploy@v5.0.3
+      - run: pnpm build
+      - uses: easingthemes/ssh-deploy@v5.1.1
         with:
           SSH_PRIVATE_KEY: ${{secrets.SSH_KEY}}
           SOURCE: dist/
