@@ -1,12 +1,12 @@
 # Hi, I'm Kid
 
-- Mostly doing web development, for fun and work
-- Good at fixing typos and bumping versions
-- Bad at following my own contributions
+Web developer / 中文 & English / UTC+8
 
-## Contributions
+- Code on [GitHub](https://github.com/kidonng)
+- Write on [Notion](https://kidonng.notion.site/)
+- Post on [Telegram](https://t.me/s/kichann)
 
-- [Refined GitHub](https://github.com/refined-github/refined-github)
-- Package repositories including Homebrew, Scoop and Nixpkgs
-- fish shell plugins and integrations
-- ~1,000 pull requests of various topics and sizes
+## Contact
+
+- [Telegram](https://t.me/kidonng)
+- [Email](mailto:hi@xuann.wang)
