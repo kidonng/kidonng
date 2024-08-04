@@ -1,6 +1,6 @@
 # Hi, I'm Kid
 
-Web developer / 中文 & English / UTC+8
+Web developer • 中文 & English • UTC+8
 
 - Code on [GitHub](https://github.com/kidonng)
 - Write on [Notion](https://kidonng.notion.site/)

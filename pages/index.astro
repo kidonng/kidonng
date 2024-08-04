@@ -9,8 +9,11 @@ const avatarSize = 100
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
     <title>Hi, I'm Kid</title>
-    <meta name="description" content="Web developer / 中文 & English / UTC+8" />
+    <meta name="description" content="Web developer • 中文 & English • UTC+8" />
+    <meta property="og:image" content={`${avatar}?size=${avatarSize * 2}`} />
+
     <meta name="color-scheme" content="light dark" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
@@ -23,7 +26,7 @@ const avatarSize = 100
       srcset={`${avatar}?size=${avatarSize * 2} 2x`}
       width={avatarSize}
       height={avatarSize}
-      alt="Nahida from Genshin Impact"
+      alt="Akaza Akari from Yuru Yuri"
     />
 
     <Content />
