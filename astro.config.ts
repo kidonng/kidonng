@@ -1,9 +1,9 @@
-import {defineConfig} from 'astro/config'
+import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 
 export default defineConfig({
-	integrations: [
-		tailwind(),
-	],
-	srcDir: '.',
+  integrations: [
+    tailwind(),
+  ],
+  srcDir: '.',
 })

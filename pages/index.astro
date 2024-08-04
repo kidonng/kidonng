@@ -1,28 +1,40 @@
 ---
-import {Content} from '../readme.md'
+import { Content } from '../readme.md'
 
-const avatar = 'https://wsrv.nl/?output=webp&url=https://gravatar.com/avatar/193222282fa770ae593ae08edbeb8942dc56d98cb7bce6360c49e4fefa7c2431'
+const avatar =
+  'https://wsrv.nl/?output=webp&url=https://gravatar.com/avatar/193222282fa770ae593ae08edbeb8942dc56d98cb7bce6360c49e4fefa7c2431'
 const avatarSize = 100
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Hi, I'm Kid</title>
-		<meta name="description" content="Web developer / 中文 & English / UTC+8">
-		<meta name="color-scheme" content="light dark">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<body class="prose prose-xl dark:prose-invert p-8 mx-auto max-w-screen-sm sm:mt-8">
-		<img class="rounded-full" src={avatar} srcset={`${avatar}?size=${avatarSize * 2} 2x`} width={avatarSize} height={avatarSize} alt="Nahida from Genshin Impact">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hi, I'm Kid</title>
+    <meta name="description" content="Web developer / 中文 & English / UTC+8" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body
+    class="prose prose-xl dark:prose-invert p-8 mx-auto max-w-screen-sm sm:mt-8"
+  >
+    <img
+      class="rounded-full"
+      src={avatar}
+      srcset={`${avatar}?size=${avatarSize * 2} 2x`}
+      width={avatarSize}
+      height={avatarSize}
+      alt="Nahida from Genshin Impact"
+    />
 
-		<Content/>
+    <Content />
 
-		<template id="icp">
-			<div class="text-xs mt-16">
-				<a class="text-gray-400 font-thin no-underline" href="https://beian.miit.gov.cn/"></a>
-			</div>
-		</template>
-		<script src="../scripts/icp.ts"></script>
-	</body>
+    <template id="icp">
+      <div class="text-xs mt-16">
+        <a
+          class="text-gray-400 font-thin no-underline"
+          href="https://beian.miit.gov.cn/"></a>
+      </div>
+    </template>
+    <script src="../scripts/icp.ts"></script>
+  </body>
 </html>

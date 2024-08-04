@@ -1,22 +1,22 @@
 {
-	"scripts": {
-		"build": "astro build",
-		"check": "tsc --noEmit",
-		"dev": "astro dev",
-		"lint": "eslint"
-	},
-	"type": "module",
-	"devDependencies": {
-		"@antfu/eslint-config": "^2.24.1",
-		"@astrojs/tailwind": "^5.1.0",
-		"@tailwindcss/typography": "^0.5.13",
-		"astro": "^4.12.2",
-		"eslint": "^9.8.0",
-		"eslint-plugin-astro": "^1.2.3",
-		"eslint-plugin-format": "^0.1.2",
-		"prettier-plugin-astro": "^0.14.1",
-		"tailwindcss": "^3.4.6",
-		"typescript": "^5.5.4"
-	},
-	"packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
+  "type": "module",
+  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
+  "scripts": {
+    "build": "astro build",
+    "check": "tsc --noEmit",
+    "dev": "astro dev",
+    "lint": "eslint"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.24.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "@tailwindcss/typography": "^0.5.13",
+    "astro": "^4.12.2",
+    "eslint": "^9.8.0",
+    "eslint-plugin-astro": "^1.2.3",
+    "eslint-plugin-format": "^0.1.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.4"
+  }
 }

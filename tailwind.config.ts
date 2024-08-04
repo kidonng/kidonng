@@ -1,13 +1,13 @@
-import type {Config} from 'tailwindcss'
+import type { Config } from 'tailwindcss'
 import typograhy from '@tailwindcss/typography'
 
 const config: Config = {
-    content: [
-        'pages/**/*.astro',
-    ],
-    plugins: [
-        typograhy,
-    ],
+  content: [
+    'pages/**/*.astro',
+  ],
+  plugins: [
+    typograhy,
+  ],
 }
 
 export default config
