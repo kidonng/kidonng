@@ -2,13 +2,19 @@
 	"scripts": {
 		"build": "astro build",
 		"check": "tsc --noEmit",
-		"dev": "astro dev"
+		"dev": "astro dev",
+		"lint": "eslint"
 	},
 	"type": "module",
 	"devDependencies": {
+		"@antfu/eslint-config": "^2.24.1",
 		"@astrojs/tailwind": "^5.1.0",
 		"@tailwindcss/typography": "^0.5.13",
 		"astro": "^4.12.2",
+		"eslint": "^9.8.0",
+		"eslint-plugin-astro": "^1.2.3",
+		"eslint-plugin-format": "^0.1.2",
+		"prettier-plugin-astro": "^0.14.1",
 		"tailwindcss": "^3.4.6",
 		"typescript": "^5.5.4"
 	},
