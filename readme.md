@@ -4,7 +4,7 @@
 
 - Code on [GitHub](https://github.com/kidonng)
 - Write on [Notion](https://kidonng.notion.site/)
-- Post on [Telegram](https://t.me/s/kichann)
+- Post on [Telegram](https://post.xuann.wang)
 
 ## Contact
 
