@@ -17,11 +17,13 @@ jobs:
           cache: pnpm
       - run: pnpm install
       - run: pnpm build
-      - uses: easingthemes/ssh-deploy@v5.1.1
-        with:
-          SSH_PRIVATE_KEY: ${{secrets.SSH_KEY}}
-          SOURCE: dist/
-          REMOTE_USER: github
-          REMOTE_HOST: qcloud.xuann.wang
-          TARGET: /srv/http/xuann.wang
-          ARGS: --delete
+      - uses: astral-sh/setup-uv@v3
+      # coscmd does not support Python 3.12+
+      # https://github.com/tencentyun/coscmd/issues/311
+      - run: |
+          uvx --python 3.11 coscmd config \
+            -a ${{ secrets.TENCENT_CLOUD_SECRET_ID }} \
+            -s ${{ secrets.TENCENT_CLOUD_SECRET_KEY }} \
+            -b ${{ secrets.TENCENT_CLOUD_COS_BUCKET }} \
+            -r ${{ secrets.TENCENT_CLOUD_COS_REGION }}
+      - run: uvx --python 3.11 coscmd upload -r dist/ /
