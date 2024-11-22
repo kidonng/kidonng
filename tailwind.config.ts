@@ -1,13 +1,11 @@
 import type { Config } from 'tailwindcss'
 import typograhy from '@tailwindcss/typography'
 
-const config: Config = {
+export default {
   content: [
     'pages/**/*.astro',
   ],
   plugins: [
     typograhy,
   ],
-}
-
-export default config
+} satisfies Config
