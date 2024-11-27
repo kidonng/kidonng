@@ -1,39 +1,46 @@
 ---
+import { Image } from 'astro:assets'
 import { Content } from '../../readme.md'
 
-const avatar = 'https://wsrv.nl/?output=webp&url=https://gravatar.com/avatar/193222282fa770ae593ae08edbeb8942dc56d98cb7bce6360c49e4fefa7c2431'
-const avatarSize = 100
+const avatarSize = 96 * 2
+const avatar = `https://gravatar.com/avatar/193222282fa770ae593ae08edbeb8942dc56d98cb7bce6360c49e4fefa7c2431?s=${avatarSize}`
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
 
-    <title>Hi, I'm Kid</title>
-    <meta name="description" content="Web Developer • 中文 & English • UTC+8" />
-    <meta property="og:image" content={`${avatar}?size=${avatarSize * 2}`} />
+    <title>Kid • Web Developer</title>
+    <meta property="og:image" content={avatar} />
 
     <meta name="color-scheme" content="light dark" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body class="prose prose-xl dark:prose-invert p-8 mx-auto max-w-screen-sm sm:mt-8">
-    <img
-      class="rounded-full"
-      src={avatar}
-      srcset={`${avatar}?size=${avatarSize * 2} 2x`}
-      width={avatarSize}
-      height={avatarSize}
-      alt="Akaza Akari from Yuru Yuri"
-    />
+  <body class="bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white">
+    {/*
+      * .min-h-screen & .dark:bg-neutral-900 to prevent inconsistent background color in Chrome
+      * reproducible on external monitors
+      */}
+    <main class="max-w-xl min-h-screen dark:bg-neutral-900 flex flex-col gap-4 px-4 py-16 mx-auto text-center">
+      <Image
+        class="size-24 rounded-full mx-auto"
+        src={avatar}
+        alt="Nahida from Genshin Impact"
+        width={avatarSize}
+        height={avatarSize}
+      />
 
-    <Content />
-
-    <template id="icp">
-      <div class="text-xs mt-16">
-        <a class="text-gray-400 font-thin no-underline" href="https://beian.miit.gov.cn/" />
+      <div class="content">
+        <Content />
       </div>
-    </template>
-    <script src="../scripts/icp.ts" />
+
+      <template id="icp">
+        <div class="font-thin text-xs text-gray-400 mt-16">
+          <a href="https://beian.miit.gov.cn/" />
+        </div>
+      </template>
+      <script src="../scripts/icp.ts" />
+    </main>
 
     <script src="../main.ts" />
   </body>

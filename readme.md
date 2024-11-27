@@ -1,12 +1,9 @@
-# Hi, I'm Kid
+# Kid
 
-**Web Developer • 中文 & English • UTC+8**
+Web Developer
 
-- Code on [GitHub](https://github.com/kidonng)
-- Write on [Notion](https://kidonng.notion.site/)
-- Post on [Telegram](https://post.xuann.wang)
-
-## Contact
-
-- [Telegram](https://t.me/kidonng)
-- [Email](mailto:hi@xuann.wang)
+- [Code](https://github.com/kidonng)
+- [Write](https://kidonng.notion.site)
+- [Post](https://post.xuann.wang)
+- [Chat](https://t.me/kidonng)
+- [Mail](mailto:hi@xuann.wang)

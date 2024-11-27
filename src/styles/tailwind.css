@@ -1,3 +1,23 @@
 @import 'tailwindcss';
 
-@plugin '@tailwindcss/typography';
+@layer components {
+  .content {
+    @apply font-medium;
+
+    h1 {
+      @apply font-bold text-2xl;
+    }
+
+    ul {
+      @apply flex flex-col gap-4 mt-8;
+    }
+
+    a {
+      @apply block px-12 py-4 border-2 rounded-lg transition-colors;
+
+      &:hover {
+        @apply bg-neutral-900 border-neutral-900 text-white dark:bg-white dark:border-white dark:text-neutral-900;
+      }
+    }
+  }
+}
