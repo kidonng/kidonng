@@ -1,8 +1,7 @@
 ---
-import { Content } from '../readme.md'
+import { Content } from '../../readme.md'
 
-const avatar =
-  'https://wsrv.nl/?output=webp&url=https://gravatar.com/avatar/193222282fa770ae593ae08edbeb8942dc56d98cb7bce6360c49e4fefa7c2431'
+const avatar = 'https://wsrv.nl/?output=webp&url=https://gravatar.com/avatar/193222282fa770ae593ae08edbeb8942dc56d98cb7bce6360c49e4fefa7c2431'
 const avatarSize = 100
 ---
 
@@ -16,10 +15,6 @@ const avatarSize = 100
 
     <meta name="color-scheme" content="light dark" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <script>
-      import '../styles/tailwind.css'
-    </script>
   </head>
   <body class="prose prose-xl dark:prose-invert p-8 mx-auto max-w-screen-sm sm:mt-8">
     <img
@@ -35,9 +30,11 @@ const avatarSize = 100
 
     <template id="icp">
       <div class="text-xs mt-16">
-        <a class="text-gray-400 font-thin no-underline" href="https://beian.miit.gov.cn/"></a>
+        <a class="text-gray-400 font-thin no-underline" href="https://beian.miit.gov.cn/" />
       </div>
     </template>
-    <script src="../scripts/icp.ts"></script>
+    <script src="../scripts/icp.ts" />
+
+    <script src="../main.ts" />
   </body>
 </html>
