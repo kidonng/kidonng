@@ -2,10 +2,10 @@
 
 @layer components {
   .content {
-    @apply font-medium;
+    @apply font-medium text-xl;
 
     h1 {
-      @apply font-bold text-2xl;
+      @apply font-bold text-4xl;
     }
 
     ul {
