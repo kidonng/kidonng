@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import { Content } from '../../readme.md'
+import { icpId } from '../constants/elements'
 
 const avatarSize = 96 * 2
 const avatar = `https://gravatar.com/avatar/193222282fa770ae593ae08edbeb8942dc56d98cb7bce6360c49e4fefa7c2431?s=${avatarSize}`
@@ -35,12 +36,11 @@ const avatar = `https://gravatar.com/avatar/193222282fa770ae593ae08edbeb8942dc56
         <Content />
       </div>
 
-      <template id="icp">
+      <template id={icpId}>
         <div class="font-thin text-xs text-gray-400 mt-16">
           <a href="https://beian.miit.gov.cn/" />
         </div>
       </template>
-      <script src="../scripts/icp.ts" />
     </main>
 
     <script src="../main.ts" />
