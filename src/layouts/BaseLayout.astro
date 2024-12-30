@@ -1,0 +1,77 @@
+---
+import { Avatar } from '../constants/avatar'
+import '../styles.css'
+
+interface Props {
+    title: string
+    description: string
+}
+
+const { title, description } = Astro.props
+
+type Meta = {
+    charset: 'utf-8'
+} | {
+    name: string
+    content: string
+} | {
+    property: string
+    content: string
+}
+
+const MetaItems: Meta[] = [
+    { charset: 'utf-8' },
+    {
+        name: 'viewport',
+        content: 'width=device-width',
+    },
+    {
+        name: 'color-scheme',
+        content: 'light dark',
+    },
+    {
+        name: 'description',
+        content: description,
+    },
+    {
+        property: 'og:type',
+        content: 'website',
+    },
+    {
+        property: 'og:site_name',
+        content: 'Kid',
+    },
+    {
+        property: 'og:url',
+        content: Astro.url.href,
+    },
+    {
+        property: 'og:title',
+        content: title,
+    },
+    {
+        property: 'og:description',
+        content: description,
+    },
+    {
+        property: 'og:image',
+        content: Avatar.src,
+    },
+    {
+        property: 'og:image:alt',
+        content: Avatar.alt,
+    },
+]
+---
+
+<html lang="en">
+    <head>
+        {MetaItems.map(item => <meta {...item} />)}
+
+        <title>{title}</title>
+    </head>
+
+    <body class="min-h-screen text-neutral-900 dark:text-white dark:bg-neutral-900">
+        <slot />
+    </body>
+</html>

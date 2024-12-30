@@ -17,7 +17,7 @@ jobs:
           cache: pnpm
       - run: pnpm install
       - run: pnpm build
-      - uses: astral-sh/setup-uv@v3
+      - uses: astral-sh/setup-uv@v5
       # coscmd does not support Python 3.12+
       # https://github.com/tencentyun/coscmd/issues/311
       - run: |

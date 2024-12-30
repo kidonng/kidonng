@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "Preserve",
-    "strict": true,
-    "skipLibCheck": true
+    "strict": true
   }
 }

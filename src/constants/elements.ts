@@ -1,1 +1,3 @@
-export const icpId = 'icp'
+export const IndexId = {
+  Icp: 'icp',
+}

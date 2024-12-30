@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@layer components {
+  #index-content {
+    @apply text-lg font-medium;
+
+    h1 {
+      @apply text-2xl font-bold;
+    }
+
+    ul {
+      @apply flex flex-col gap-4 mt-8;
+    }
+
+    a {
+      @apply block px-12 py-4 border-2 rounded-4xl transition-colors;
+
+      &:hover {
+        @apply text-white bg-neutral-900 border-neutral-900 dark:text-neutral-900 dark:bg-white dark:border-white;
+      }
+    }
+  }
+}
