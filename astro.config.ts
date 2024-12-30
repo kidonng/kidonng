@@ -7,6 +7,7 @@ export default defineConfig({
       tailwindcss(),
     ],
   },
+  site: 'https://xuann.wang',
   image: {
     // https://docs.astro.build/en/guides/images/#authorizing-remote-images
     domains: [
