@@ -4,6 +4,7 @@
   "scripts": {
     "build": "astro build",
     "dev": "astro dev",
+    "dev:host": "astro dev --host",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
