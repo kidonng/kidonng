@@ -15,8 +15,12 @@
     a {
       @apply block px-12 py-4 border-2 rounded-4xl transition-colors;
 
-      &:hover {
-        @apply text-white bg-neutral-900 border-neutral-900 dark:text-neutral-900 dark:bg-white dark:border-white;
+      @variant hover {
+        @apply text-white bg-neutral-900 border-neutral-900;
+
+        @variant dark {
+          @apply text-neutral-900 bg-white border-white;
+        }
       }
     }
   }
