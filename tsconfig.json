@@ -1,7 +1,3 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "Preserve",
-    "strict": true
-  }
+  "extends": "astro/tsconfigs/strictest"
 }
