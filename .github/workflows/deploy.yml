@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Corepack from actions image may be outdated with bugs
+      # https://github.com/nodejs/corepack/issues/612
+      - run: npm install --global corepack
       - run: corepack enable
       - uses: actions/setup-node@v4
         with:
