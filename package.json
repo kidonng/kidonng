@@ -8,6 +8,9 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
+  "dependencies": {
+    "@fontsource-variable/playpen-sans": "^5.2.5"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^4.5.1",
     "@tailwindcss/vite": "^4.0.9",
