@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 
+/* https://tailwindcss.com/docs/upgrade-guide#hover-styles-on-mobile */
+@custom-variant hover (&:hover);
+
 @theme {
   --font-sans: 'Playpen Sans Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
