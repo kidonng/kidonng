@@ -1,6 +1,6 @@
 # Kid
 
-Web Developer
+Weeb Developer
 
 - [Code](https://github.com/kidonng)
 - [Write](https://kidonng.notion.site)
