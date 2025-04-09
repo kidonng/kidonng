@@ -9,7 +9,8 @@
     "lint:fix": "eslint --fix"
   },
   "dependencies": {
-    "@fontsource-variable/playpen-sans": "^5.2.5"
+    "@fontsource-variable/playpen-sans": "^5.2.5",
+    "motion": "^12.6.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.11.0",

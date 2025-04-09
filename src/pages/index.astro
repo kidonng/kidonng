@@ -1,10 +1,13 @@
 ---
 import { Image } from 'astro:assets'
+import { spring } from 'motion'
 import { Content } from '../../readme.md'
 import { Avatar } from '../constants/avatar'
 import { IndexId } from '../constants/elements'
 import BaseLayout from '../layouts/BaseLayout.astro'
 ---
+
+<style define:vars={{ motion: spring(0.5) }} />
 
 <BaseLayout
   title="Kid · Weeb Developer"
@@ -12,7 +15,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 >
     <main class="max-w-xl mx-auto text-center px-4 pt-16 pb-8">
         <Image
-          class="size-24 rounded-full mx-auto mb-4"
+          class="size-24 rounded-full mx-auto mb-4 animate-[slide-in-up_both_var(--motion)]"
           {...Avatar}
           inferSize
           loading="eager"
