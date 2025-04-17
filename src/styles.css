@@ -4,8 +4,7 @@
 @custom-variant hover (&:hover);
 
 @theme {
-  --font-sans: 'Playpen Sans Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-playpen-sans: 'Playpen Sans Variable', var(--font-sans);
 
   /* https://catppuccin.com/palette/ */
   --color-ctp-latte-base: #eff1f5;
