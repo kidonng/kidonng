@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource-variable/playpen-sans": "^5.2.5",
+    "code-tag": "^1.2.0",
     "motion": "^12.6.3"
   },
   "devDependencies": {

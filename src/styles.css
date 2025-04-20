@@ -20,19 +20,22 @@
   --color-mantle: light-dark(var(--color-ctp-latte-mantle), var(--color-ctp-frappe-mantle));
   --color-crust: light-dark(var(--color-ctp-latte-crust), var(--color-ctp-frappe-crust));
   --color-text: light-dark(var(--color-ctp-latte-text), var(--color-ctp-frappe-text));
-}
 
-@keyframes slide-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(50%);
+  --animate-slide-in-up: slide-in-up both var(--spring-500);
+  --animate-slide-in-right: slide-in-right both var(--spring-500);
+
+  @keyframes slide-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(50%);
+    }
   }
-}
 
-@keyframes slide-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(-25%);
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(-25%);
+    }
   }
 }
 
@@ -41,7 +44,7 @@
 
   h1,
   p {
-    @apply animate-[slide-in-up_both_var(--motion)];
+    @apply animate-slide-in-up;
   }
 
   h1 {
@@ -53,7 +56,7 @@
   }
 
   li {
-    @apply animate-[slide-in-right_both_var(--motion)];
+    @apply animate-slide-in-right;
     animation-delay: calc(0.2s + 0.1s * var(--n));
 
     &:nth-child(1) { --n: 1; }
