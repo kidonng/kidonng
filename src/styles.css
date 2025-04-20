@@ -16,21 +16,10 @@
   --color-ctp-frappe-crust: #232634;
   --color-ctp-frappe-text: #c6d0f5;
 
-  --color-base: var(--color-ctp-latte-base);
-  --color-mantle: var(--color-ctp-latte-mantle);
-  --color-crust: var(--color-ctp-latte-crust);
-  --color-text: var(--color-ctp-latte-text);
-}
-
-@layer theme {
-  :root {
-    @variant dark {
-      --color-base: var(--color-ctp-frappe-base);
-      --color-mantle: var(--color-ctp-frappe-mantle);
-      --color-crust: var(--color-ctp-frappe-crust);
-      --color-text: var(--color-ctp-frappe-text);
-    }
-  }
+  --color-base: light-dark(var(--color-ctp-latte-base), var(--color-ctp-frappe-base));
+  --color-mantle: light-dark(var(--color-ctp-latte-mantle), var(--color-ctp-frappe-mantle));
+  --color-crust: light-dark(var(--color-ctp-latte-crust), var(--color-ctp-frappe-crust));
+  --color-text: light-dark(var(--color-ctp-latte-text), var(--color-ctp-frappe-text));
 }
 
 @keyframes slide-in-up {
