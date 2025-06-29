@@ -12,65 +12,21 @@ interface Props {
 }
 
 const { title, description } = Astro.props
-
-type Meta = {
-    charset: 'utf-8'
-} | {
-    name: string
-    content: string
-} | {
-    property: string
-    content: string
-}
-
-const MetaItems: Meta[] = [
-    { charset: 'utf-8' },
-    {
-        name: 'viewport',
-        content: 'width=device-width',
-    },
-    {
-        name: 'color-scheme',
-        content: 'light dark',
-    },
-    {
-        name: 'description',
-        content: description,
-    },
-    {
-        property: 'og:type',
-        content: 'website',
-    },
-    {
-        property: 'og:site_name',
-        content: 'Kid',
-    },
-    {
-        property: 'og:url',
-        content: Astro.url.href,
-    },
-    {
-        property: 'og:title',
-        content: title,
-    },
-    {
-        property: 'og:description',
-        content: description,
-    },
-    {
-        property: 'og:image',
-        content: Avatar.src,
-    },
-    {
-        property: 'og:image:alt',
-        content: Avatar.alt,
-    },
-]
 ---
 
 <html lang="en">
     <head>
-        {MetaItems.map(item => <meta {...item} />)}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Kid" />
+        <meta property="og:url" content={Astro.url.href} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={Avatar.src} />
+        <meta property="og:image:alt" content={Avatar.alt} />
 
         <title>{title}</title>
 
