@@ -3,11 +3,12 @@ import { Image } from 'astro:assets'
 import { Content } from '../../readme.md'
 import { Avatar } from '../constants/avatar'
 import { IndexId } from '../constants/elements'
+import { Site } from '../constants/site'
 import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
 <BaseLayout
-  title="Kid · Weeb Developer"
+  title={Site.name}
   description="@kidonng's homepage"
 >
     <main class="max-w-xl mx-auto text-center px-4 pt-16 pb-8">

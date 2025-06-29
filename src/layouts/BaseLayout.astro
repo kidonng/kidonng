@@ -2,6 +2,7 @@
 import { css } from 'code-tag'
 import { spring } from 'motion'
 import { Avatar } from '../constants/avatar'
+import { Site } from '../constants/site'
 
 import '@fontsource-variable/playpen-sans'
 import '../styles.css'
@@ -21,7 +22,7 @@ const { title, description } = Astro.props
         <meta name="color-scheme" content="light dark" />
         <meta name="description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Kid" />
+        <meta property="og:site_name" content={Site.name} />
         <meta property="og:url" content={Astro.url.href} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
