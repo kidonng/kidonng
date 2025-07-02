@@ -24,6 +24,7 @@
   --animate-slide-in-up: slide-in-up both var(--spring-500);
   --animate-slide-in-right: slide-in-right both var(--spring-500);
 
+  /* Animation inspired by https://cheff.dev */
   @keyframes slide-in-up {
     from {
       opacity: 0;
@@ -39,6 +40,7 @@
   }
 }
 
+/* Layout inspired by https://linktr.ee/turnertemplate */
 #index-content {
   @apply text-lg font-medium;
 
