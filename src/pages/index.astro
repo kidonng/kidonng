@@ -11,7 +11,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
   title={Site.name}
   description="@kidonng's homepage"
 >
-    <main class="max-w-xl mx-auto text-center px-4 pt-16 pb-8">
+    <main class="flex flex-col min-h-screen justify-center max-w-xl mx-auto text-center px-4 py-8">
         <Image
           class="size-24 rounded-full mx-auto mb-4 animate-slide-in-up"
           {...Avatar}
@@ -25,7 +25,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
         <script src="../scripts/channel-link.ts" />
 
         <template id={IndexId.Icp}>
-            <div class="text-xs font-thin mt-32">
+            <div class="text-xs font-thin mt-32 -mb-32">
                 <a href="https://beian.miit.gov.cn" />
             </div>
         </template>
