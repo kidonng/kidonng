@@ -1,0 +1,11 @@
+<style is:inline>
+    body[data-lang] .lang-divider,
+    body[data-lang^="zh"] [lang="en"],
+    body[data-lang]:not([data-lang^="zh"]) [lang="zh"] {
+        display: none;
+    }
+</style>
+
+<script is:inline>
+    document.body.setAttribute('data-lang', navigator.language)
+</script>

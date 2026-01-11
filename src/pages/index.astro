@@ -1,34 +1,142 @@
 ---
+import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
-import { Content } from '../../readme.md'
-import { Avatar } from '../constants/avatar'
-import { IndexId } from '../constants/elements'
-import { Site } from '../constants/site'
+import Lang from '../components/Lang.astro'
+import { HomeElements } from '../constants/home-elements.ts'
+import { HomeLinks } from '../constants/home-links.ts'
+import DesktopImage from '../images/desktop.jpg'
 import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
-<BaseLayout
-  title={Site.name}
-  description="@kidonng's homepage"
->
-    <main class="flex flex-col min-h-screen justify-center max-w-xl mx-auto text-center px-4 py-8">
-        <Image
-          class="size-24 rounded-full mx-auto mb-4 animate-slide-in-up"
-          {...Avatar}
-          inferSize
-          loading="eager"
-        />
+<BaseLayout title="Kid (@kidonng)">
+    <main class="max-w-3xl mx-auto px-8 py-12 flex flex-col gap-12 text-2xl">
+        <header class="flex flex-col gap-4 text-lg">
+            <h1 class="text-4xl font-light">
+                Kid
+            </h1>
 
-        <div id="index-content">
-            <Content />
-        </div>
-        <script src="../scripts/channel-link.ts" />
+            <p>
+                <span lang="zh">兴趣使然的 Web 开发。</span>
+                <br class="lang-divider" />
+                <span lang="en">Hobbyist-turned web developer.</span>
+            </p>
 
-        <template id={IndexId.Icp}>
-            <div class="text-xs font-thin mt-32 -mb-32">
-                <a href="https://beian.miit.gov.cn" />
-            </div>
+            <span class="inline-flex gap-4">
+                <a
+                  class="inline-flex items-center gap-1 text-accent hover:underline hover:underline-offset-4"
+                  href="/about"
+                >
+                    <span lang="zh">关于</span>
+                    <span lang="en">About</span>
+                    <Icon name="lucide:chevron-right" />
+                </a>
+
+                <a
+                  class="inline-flex items-center gap-1 text-accent hover:underline hover:underline-offset-4"
+                  href="/work"
+                >
+                    <span lang="zh">作品</span>
+                    <span lang="en">Work</span>
+                    <Icon name="lucide:chevron-right" />
+                </a>
+            </span>
+        </header>
+
+        <nav>
+            <ul class="flex flex-col gap-4">
+                <li>
+                    <a href={HomeLinks.channel.original}>
+                        <Icon name="lucide:rss" />
+                        <span lang="zh">想法</span>
+                        <span lang="en">Thought</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/kidonng">
+                        <Icon name="lucide:code" />
+                        <span lang="zh">代码</span>
+                        <span lang="en">Code</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href={`${HomeLinks.notion.original}/write`}>
+                        <Icon name="lucide:pen" />
+                        <span lang="zh">写作</span>
+                        <span lang="en">Write</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href={`${HomeLinks.notion.original}/note`}>
+                        <Icon name="lucide:notebook" />
+                        <span lang="zh">笔记</span>
+                        <span lang="en">Note</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href={`${HomeLinks.notion.original}/review`}>
+                        <Icon name="lucide:star" />
+                        <span lang="zh">评论</span>
+                        <span lang="en">Review</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav>
+            <ul class="flex flex-col gap-4">
+                <li>
+                    <a href="https://t.me/kidonng">
+                        <Icon name="lucide:message-circle" />
+                        <span lang="zh">聊天</span>
+                        <span lang="en">Chat</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mailto:hi@xuann.wang">
+                        <Icon name="lucide:mail" />
+                        <span lang="zh">邮件</span>
+                        <span lang="en">Mail</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <a href={DesktopImage.src}>
+            <Image
+              class="rounded-lg transition hover:scale-105"
+              src={DesktopImage}
+              alt="桌面 Desktop"
+              width={704}
+              densities={[2]}
+              loading="eager"
+            />
+        </a>
+
+        <template id={HomeElements.icpTemplate}>
+            <footer>
+                <a
+                  class="text-xs font-thin"
+                  href="https://beian.miit.gov.cn"
+                />
+            </footer>
         </template>
-        <script src="../scripts/icp.ts" />
     </main>
+
+    <Lang />
+
+    <style>
+        @reference '../styles.css';
+
+        nav a {
+            @apply inline-flex items-center gap-2 text-muted-fg hover:text-accent;
+        }
+    </style>
+
+    <script src="../scripts/home-links.ts" />
+    <script src="../scripts/home-icp.ts" />
 </BaseLayout>

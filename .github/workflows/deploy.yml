@@ -2,25 +2,26 @@ name: Deploy
 
 on:
   push:
-    branches: main
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      # Corepack from actions image may be outdated with bugs
-      # https://github.com/nodejs/corepack/issues/612
+      - uses: actions/checkout@v6.0.1
+
       - run: npm install --global corepack
       - run: corepack enable
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6.1.0
         with:
           node-version: latest
-          cache: pnpm
+
       - run: pnpm install
       - run: pnpm build
-      - uses: astral-sh/setup-uv@v5
+
+      - uses: astral-sh/setup-uv@v7.2.0
       # coscmd does not support Python 3.12+
       # https://github.com/tencentyun/coscmd/issues/311
       - run: |

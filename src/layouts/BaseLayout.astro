@@ -1,46 +1,22 @@
 ---
-import { css } from 'code-tag'
-import { spring } from 'motion'
-import { Avatar } from '../constants/avatar'
-import { Site } from '../constants/site'
-
-import '@fontsource-variable/playpen-sans'
 import '../styles.css'
 
 interface Props {
     title: string
-    description: string
 }
 
-const { title, description } = Astro.props
+const { title } = Astro.props
 ---
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
-        <meta name="color-scheme" content="light dark" />
-        <meta name="description" content={description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content={Site.name} />
-        <meta property="og:url" content={Astro.url.href} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={Avatar.src} />
-        <meta property="og:image:alt" content={Avatar.alt} />
 
         <title>{title}</title>
-
-        <style set:html={css`
-            :root {
-                --spring-500: ${spring(0.5).toString()};
-            }
-        `}
-        />
     </head>
 
-    {/* cursor-default inspired by https://www.notion.com */}
-    <body class="bg-base text-text font-playpen-sans cursor-default">
+    <body class="bg-muted-bg">
         <slot />
     </body>
 </html>
