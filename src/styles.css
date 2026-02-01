@@ -1,8 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-  /* https://primer.style/product/primitives/color/ */
-  --color-accent: #0969da;
-  --color-muted-fg: #59636e;
-  --color-muted-bg: #f6f8fa;
+  --color-accent: var(--color-blue-600);
+  --color-muted-fg: var(--color-gray-600);
+  --color-muted-bg: var(--color-neutral-50);
 }
