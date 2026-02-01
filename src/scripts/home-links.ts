@@ -23,7 +23,7 @@ timeoutSignal.addEventListener('abort', () => {
   networkProbe.src = ''
 })
 
-networkProbe.src = 'https://telegram.org/img/favicon-16x16.png'
+networkProbe.src = 'https://www.gstatic.com/images/branding/searchlogo/ico/favicon.ico'
 setTimeout(() => {
   timeoutController.abort()
-}, 5_000)
+}, 3_000)
