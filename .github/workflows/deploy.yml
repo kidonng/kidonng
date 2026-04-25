@@ -16,7 +16,6 @@ jobs:
         with:
           node-version: '24'
           cache: true
-      - run: vp install
       - run: vp build
 
       - uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b
