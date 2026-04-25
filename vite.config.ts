@@ -11,6 +11,7 @@ export default defineConfig({
     tanstackStart({
       prerender: {
         enabled: true,
+        filter: ({ path }) => !/\.(jpe?g|png|webp)$/.test(path),
       },
     }),
     react(),
