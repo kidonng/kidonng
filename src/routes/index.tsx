@@ -180,7 +180,7 @@ function useShowOriginalLink() {
       probe.src = ''
     })
 
-    probe.src = 'https://www.gstatic.com/images/branding/searchlogo/ico/favicon.ico'
+    probe.src = 'https://telegram.org/img/favicon-16x16.png'
   }, [])
 
   return { showOriginalLink }
