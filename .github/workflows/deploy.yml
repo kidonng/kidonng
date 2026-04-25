@@ -10,18 +10,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6.0.1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
-      - run: npm install --global corepack
-      - run: corepack enable
-      - uses: actions/setup-node@v6.1.0
+      - uses: voidzero-dev/setup-vp@4f5aa3e38c781f1b01e78fb9255527cee8a6efa6
         with:
-          node-version: latest
+          node-version: '24'
+          cache: true
+      - run: vp install
+      - run: vp build
 
-      - run: pnpm install
-      - run: pnpm build
-
-      - uses: astral-sh/setup-uv@v7.2.0
+      - uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b
       # coscmd does not support Python 3.12+
       # https://github.com/tencentyun/coscmd/issues/311
       - run: |
@@ -30,4 +28,4 @@ jobs:
             -s ${{ secrets.TENCENT_CLOUD_SECRET_KEY }} \
             -b ${{ secrets.TENCENT_CLOUD_COS_BUCKET }} \
             -r ${{ secrets.TENCENT_CLOUD_COS_REGION }}
-      - run: uvx --python 3.11 coscmd upload -r dist/ /
+      - run: uvx --python 3.11 coscmd upload -r dist/client/ /

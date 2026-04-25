@@ -1,3 +1,9 @@
 {
-  "extends": "astro/tsconfigs/strictest"
+  "compilerOptions": {
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "target": "esnext",
+    "jsx": "react-jsx",
+    "rewriteRelativeImportExtensions": true
+  }
 }

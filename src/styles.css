@@ -5,3 +5,19 @@
   --color-muted-fg: var(--color-gray-600);
   --color-muted-bg: var(--color-neutral-50);
 }
+
+@layer components {
+  a {
+    @apply text-accent hover:underline hover:underline-offset-4;
+  }
+
+  .lucide {
+    @apply size-[1em];
+  }
+}
+
+[data-lang] .lang-divider,
+[data-lang^='zh'] [lang='en'],
+[data-lang]:not([data-lang^='zh']) [lang='zh'] {
+  display: none;
+}
