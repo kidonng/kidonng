@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { ChevronLeft } from 'lucide-react'
+import { ChevronLeft, GitPullRequest, ToyBrick } from 'lucide-react'
 
 import { Route as IndexRoute } from './index.tsx'
 
@@ -35,7 +35,8 @@ function Work() {
       </header>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-2">
+        <h2 className="text-2xl font-semibold mb-2 flex items-center gap-2">
+          <GitPullRequest />
           <span lang="zh">贡献</span> <span lang="en">Contribute</span>
         </h2>
 
@@ -93,7 +94,8 @@ function Work() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-2">
+        <h2 className="text-2xl font-semibold mb-2 flex items-center gap-2">
+          <ToyBrick />
           <span lang="zh">玩具</span> <span lang="en">Toy</span>
         </h2>
 

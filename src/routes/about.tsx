@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { ChevronLeft } from 'lucide-react'
+import { ChevronLeft, Gamepad2, Heart, Laptop, Music, Sparkle } from 'lucide-react'
 
 import { Route as IndexRoute } from './index.tsx'
 
@@ -35,33 +35,35 @@ function About() {
       </header>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-2">
+        <h2 className="text-2xl font-semibold mb-2 flex items-center gap-2">
+          <Laptop />
           <span lang="zh">开发</span> <span lang="en">Develop</span>
         </h2>
 
         <ul className="list-disc ml-6 flex flex-col gap-2">
           <li>
-            <span lang="zh">折腾博客入门开发</span>
+            <span lang="zh">折腾博客入门</span>
             <br className="lang-divider" />
-            <span lang="en">Got into development tinkering blogs</span>
+            <span lang="en">Started with blog tinkering</span>
           </li>
 
           <li>
-            <span lang="zh">IDE 用 Vim 模式</span>
+            <span lang="zh">用 Vim（模式）</span>
             <br className="lang-divider" />
-            <span lang="en">IDE with Vim mode</span>
+            <span lang="en">Use Vim (mode)</span>
           </li>
 
           <li>
-            <span lang="zh">不写分号</span>
+            <span lang="zh">JavaScript 不写分号</span>
             <br className="lang-divider" />
-            <span lang="en">No semicolons</span>
+            <span lang="en">JavaScript without semicolons</span>
           </li>
         </ul>
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-2">
+        <h2 className="text-2xl font-semibold mb-2 flex items-center gap-2">
+          <Heart />
           <span lang="zh">兴趣</span> <span lang="en">Interest</span>
         </h2>
 
@@ -86,7 +88,8 @@ function About() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-2">
+        <h2 className="text-2xl font-semibold mb-2 flex items-center gap-2">
+          <Music />
           <span lang="zh">音乐</span> <span lang="en">Music</span>
         </h2>
 
@@ -117,7 +120,8 @@ function About() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-2">
+        <h2 className="text-2xl font-semibold mb-2 flex items-center gap-2">
+          <Gamepad2 />
           <span lang="zh">游戏</span> <span lang="en">Game</span>
         </h2>
 
@@ -148,7 +152,8 @@ function About() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-2">
+        <h2 className="text-2xl font-semibold mb-2 flex items-center gap-2">
+          <Sparkle />
           <span lang="zh">花絮</span> <span lang="en">Tidbit</span>
         </h2>
 
