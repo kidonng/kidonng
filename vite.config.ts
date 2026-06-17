@@ -2,11 +2,15 @@ import tailwind from '@tailwindcss/vite'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import react from '@vitejs/plugin-react'
 import { imagetools } from 'vite-imagetools'
+import font from 'vite-plugin-font'
 import { defineConfig } from 'vite-plus'
 
 export default defineConfig({
   plugins: [
     imagetools(),
+    font.vite({
+      scanFiles: ['src/**/*.{ts,tsx}'],
+    }),
     tailwind(),
     tanstackStart({
       prerender: {

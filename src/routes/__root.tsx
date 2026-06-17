@@ -1,6 +1,7 @@
 /// <reference types="vite/client" />
 import { HeadContent, Outlet, Scripts, createRootRoute, ScriptOnce } from '@tanstack/react-router'
 
+import '../fonts/Xiaolai-Regular.ttf?subsets'
 import scripts from '../scripts.js?raw'
 import styles from '../styles.css?url'
 
@@ -19,7 +20,7 @@ function Root() {
         <HeadContent />
         <ScriptOnce>{scripts}</ScriptOnce>
       </head>
-      <body className="bg-muted-bg">
+      <body className="bg-muted-bg font-xiaolai">
         <Outlet />
         <Scripts />
       </body>

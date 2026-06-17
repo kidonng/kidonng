@@ -2,3 +2,5 @@ node_modules
 
 .tanstack
 dist
+
+src/fonts
