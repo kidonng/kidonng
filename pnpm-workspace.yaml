@@ -5,6 +5,9 @@ allowBuilds:
   protobufjs: true
   sharp: true
 
+patchedDependencies:
+  cn-font-split@7.4.3: patches/cn-font-split@7.4.3.patch
+
 peerDependencyRules:
   allowAny:
     - vite
