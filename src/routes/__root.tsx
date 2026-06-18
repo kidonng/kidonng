@@ -1,9 +1,11 @@
 /// <reference types="vite/client" />
 import { HeadContent, Outlet, Scripts, createRootRoute, ScriptOnce } from '@tanstack/react-router'
 
-import '../fonts/Xiaolai-Regular.ttf?subsets'
 import scripts from '../scripts.js?raw'
 import styles from '../styles.css?url'
+
+if (import.meta.env.DEV) void import('../fonts/Xiaolai-Regular.ttf')
+else void import('../fonts/Xiaolai-Regular.ttf?subsets')
 
 export const Route = createRootRoute({
   head: () => ({
