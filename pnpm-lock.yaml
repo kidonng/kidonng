@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  cn-font-split@7.4.3: 29a1deefc0542903fa96f2f201743adb36f7eb037b9eddc9c2028d13daf0a46b
-
 importers:
 
   .:
@@ -2775,7 +2772,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  cn-font-split@7.4.3(patch_hash=29a1deefc0542903fa96f2f201743adb36f7eb037b9eddc9c2028d13daf0a46b):
+  cn-font-split@7.4.3:
     dependencies:
       buffer: 6.0.3
       commander: 12.1.0
@@ -3431,7 +3428,7 @@ snapshots:
   vite-plugin-font@5.1.2:
     dependencies:
       cn-font-metrics: 2.1.6
-      cn-font-split: 7.4.3(patch_hash=29a1deefc0542903fa96f2f201743adb36f7eb037b9eddc9c2028d13daf0a46b)
+      cn-font-split: 7.4.3
       fontaine: 0.6.0
       fs-extra: 11.3.5
       glob: 11.1.0
